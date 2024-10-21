@@ -21,12 +21,12 @@
         </nav>
     </header>
 
-    <main>
-        <div class="text-center">
-            <h1>Hello {{ $name }}</h1>
-            <p>I miei primi passi con Laravel</p>
-    </div>
-    </main>
+<main>
+    <div class="text-center">
+    <h1>{{ $pageTitle }}</h1>
+    <p>Sentiti libero di contattarci in qualsiasi momemnto.</p>
+</div>
+</main>
 
 </body>
 </html>

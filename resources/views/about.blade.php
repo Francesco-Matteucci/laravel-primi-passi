@@ -23,8 +23,8 @@
 
     <main>
         <div class="text-center">
-            <h1>Hello {{ $name }}</h1>
-            <p>I miei primi passi con Laravel</p>
+        <h1>{{ $pageTitle }}</h1>
+        <p>Benvenuto sulla pagina About us.</p>
     </div>
     </main>
 

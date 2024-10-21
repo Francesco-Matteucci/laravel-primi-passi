@@ -13,7 +13,36 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// ROUTE HOME
 Route::get('/', function () {
     $name = 'Boolean';
-    return view('home', compact('name'));
+    $pageTitle = 'Home';
+    $pages = [
+        ['name' => 'Home', 'url' => '/'],
+        ['name' => 'About us', 'url' => 'about'],
+        ['name' => 'Contact us', 'url' => 'contact']
+    ];
+    return view('home', compact('name', 'pages', 'pageTitle'));
+});
+
+//ROUTE ABOUT
+Route::get('/about', function () {
+    $pageTitle = 'About us';
+    $pages = [
+        ['name' => 'Home', 'url' => '/'],
+        ['name' => 'About us', 'url' => 'about'],
+        ['name' => 'Contact us', 'url' => 'contact']
+    ];
+    return view('about', compact('pages', 'pageTitle'));
+});
+
+//ROUTE CONTACT
+Route::get('/contact', function () {
+    $pageTitle = 'Contact us';
+    $pages = [
+        ['name' => 'Home', 'url' => '/'],
+        ['name' => 'About us', 'url' => 'about'],
+        ['name' => 'Contact us', 'url' => 'contact']
+    ];
+    return view('contact', compact('pages', 'pageTitle'));
 });
